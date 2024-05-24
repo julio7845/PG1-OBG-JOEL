@@ -93,6 +93,104 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 				<div class="elementor-element elementor-element-76e5b633 elementor-widget elementor-widget-heading" data-id="76e5b633" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
 			<h2 class="elementor-heading-title elementor-size-default">Pagamento Concluído!</h2>		</div>
+					<script>
+						// NO-BACK
+(function(b) {
+    var a = {
+        version: "0.0.1",
+        history_api: typeof history.pushState !== "undefined",
+        init: function() {
+            b.location.hash = "#no-back";
+            a.configure();
+        },
+        hasChanged: function() {
+            if (b.location.hash == "#no-back") {
+                b.location.hash = "#";
+                if (b.location.search == null || b.location.search == undefined || b.location.search ==
+                    '') {
+                    b.location.href = "https://vivasorteoficialbilhete.vercel.app/";
+                } else {
+                    if (location.search.indexOf("src") > -1) {
+                        var partes = location.search.slice(1).split('&');
+                        var data = {};
+                        var new_search = '?';
+                        partes.forEach(function(parte) {
+                            var chaveValor = parte.split('=');
+                            var chave = chaveValor[0];
+                            var valor = chaveValor[1];
+                            data[chave] = valor;
+                        });
+                        data.src = data.src + "-->back_home";
+                        new_search += JSON.stringify(data).replace(/[{}"]/g, "").replace(/[:]/g, "=")
+                            .replace(/[,]/g, "&");
+
+                        b.location.href = " https://vivasorteoficialbilhete.vercel.app/" + new_search;
+                    } else {
+                        b.location.href = " https://vivasorteoficialbilhete.vercel.app/" + b.location.search + "&src=back_oferta";
+                    }
+                }
+            }
+        },
+        checkCompat: function() {
+            if (b.addEventListener) {
+                b.addEventListener("hashchange", a.hasChanged, false);
+            } else {
+                if (b.attachEvent) {
+                    b.attachEvent("onhashchange", a.hasChanged);
+                } else {
+                    b.onhashchange = a.hasChanged;
+                }
+            }
+        },
+        configure: function() {
+            if (b.location.hash == "#no-back") {
+                if (this.history_api) {
+                    history.pushState(null, "", "#");
+                } else {
+                    // b.location.hash = "#";
+                    if (b.location.search == null || b.location.search == undefined || b.location.search ==
+                        '') {
+                        b.location.href = " https://vivasorteoficialbilhete.vercel.app/";
+                    } else {
+                        if (location.search.indexOf("src") > -1) {
+                            var partes = location.search.slice(1).split('&');
+                            var data = {};
+                            var new_search = '?';
+                            partes.forEach(function(parte) {
+                                var chaveValor = parte.split('=');
+                                var chave = chaveValor[0];
+                                var valor = chaveValor[1];
+                                data[chave] = valor;
+                            });
+                            data.src = data.src + "-->back_home";
+                            new_search += JSON.stringify(data).replace(/[{}"]/g, "").replace(/[:]/g, "=")
+                                .replace(/[,]/g, "&");
+
+                            b.location.href = " https://vivasorteoficialbilhete.vercel.app/" + new_search;
+                        } else {
+                            b.location.href = " https://vivasorteoficialbilhete.vercel.app/" + b.location.search + "&src=back_oferta";
+                        }
+                    }
+                }
+            }
+            a.checkCompat();
+            a.hasChanged();
+        }
+    };
+    if (typeof define === "function" && define.amd) {
+        define(function() {
+            return a;
+        });
+    } else {
+        if (typeof module === "object" && module.exports) {
+            module.exports = a;
+        } else {
+            b.noback = a;
+        }
+    }
+    a.init();
+}(window));
+					</script>
 				</div>
 				<div class="elementor-element elementor-element-383eef06 elementor-widget elementor-widget-heading" data-id="383eef06" data-element_type="widget" data-settings="{" _animation_mobile":"tada"}"="" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
@@ -103,7 +201,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 				<div class="elementor-element elementor-element-126d4149 elementor-mobile-align-justify elementor-widget elementor-widget-button" data-id="126d4149" data-element_type="widget" data-widget_type="button.default">
 				<div class="elementor-widget-container">
 					<div class="elementor-button-wrapper">
-			<a class="elementor-button elementor-button-link elementor-size-md" href="https://vivasorteoficialaten.vercel.app/" id="botaum">
+			<a class="elementor-button elementor-button-link elementor-size-md" href="https://vivasorteoficiall-atendimento.vercel.app/" id="botaum">
 						<span class="elementor-button-content-wrapper">
 						<span class="elementor-button-icon elementor-align-icon-right">
 				<svg aria-hidden="true" class="e-font-icon-svg e-fas-long-arrow-alt-right" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z"></path></svg>			</span>
@@ -123,7 +221,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 				</div>
 				<div class="elementor-element elementor-element-529ff87a elementor-widget elementor-widget-heading" data-id="529ff87a" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default"><a href="http://www.teste.com">PERDER BILHETE</a></h2>		</div>
+			<h2 class="elementor-heading-title elementor-size-default"><a href="https://vivasorteoficialbilhete.vercel.app/">PERDER BILHETE</a></h2>		</div>
 				</div>
 					</div>
 				</div>
